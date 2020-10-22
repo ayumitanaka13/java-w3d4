@@ -1,0 +1,149 @@
+
+public class BankAccount {
+	
+	//accountNumber
+	//customerName
+	//balance
+	//int yearCreateAccount
+	//int monthCreatedAccount
+	
+	private int accountNumber = 1234;
+	private String customerName = "Ayumi Tanaka";
+	private double balance = 2890.50;
+	private int yearCreateAccount = 2020;
+	private int monthCreatedAccount = 4;
+	
+			
+	//constructor
+	
+	public BankAccount(int accountNumber, String customerName, double balance, int yearCreateAccount, int monthCreatedAccount) {
+		
+//		this.accountNumber = accountNumber;
+//		this.customerName = customerName;
+//		this.balance = balance;
+//		this.yearCreateAccount = yearCreateAccount;
+//		this.monthCreatedAccount = monthCreatedAccount;
+		
+		if(accountNumber < 0) {
+			this.accountNumber = 0;
+		} else {
+			this.accountNumber = accountNumber;
+		}
+		if (customerName == "" || customerName == null) {
+			this.customerName = "John Doe";
+		} else {
+			this.customerName = customerName;
+		}
+		if (balance < 0) {
+			this.balance = 0;
+		} else {
+			this.balance = balance;
+		}
+		if(yearCreateAccount < 0) {
+			this.yearCreateAccount = 0;
+		} else {
+			this.yearCreateAccount = yearCreateAccount;
+		}
+		if(monthCreatedAccount < 0) {
+			this.monthCreatedAccount = 0;
+		} else {
+			this.monthCreatedAccount = monthCreatedAccount;
+		}
+	}
+	
+
+	//getters
+	
+	/*
+	 *  @return accountNumber
+	 */
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+	/*
+	 *  @return customerName
+	 */
+	public String getCustomerName() {
+		return customerName;
+	}
+	/*
+	 *  @return balance
+	 */
+	public double getBalance() {
+		return balance;
+	}
+	/*
+	 *  @return yearCreateAccount
+	 */
+	public int getYearCreateAccoun() {
+		return yearCreateAccount;
+	}
+	/*
+	 *  @return monthCreatedAccount
+	 */
+	public int getMonthCreatedAccount() {
+		return monthCreatedAccount;
+	}
+	
+	
+	//setters never return value
+	
+	
+	/*
+	 *  Set accountNumber
+	 */
+	public void setAccountNumber(int accountNumber) {
+		// this.accountNumber = accountNumber;
+		if(accountNumber < 0) {
+			this.accountNumber = 0;
+		} else {
+			this.accountNumber = accountNumber;
+		}
+	}
+	/*
+	 *  Set customerName
+	 */
+	public void setCustomerName(String customerName) {
+		if(customerName == "" || customerName == null) {
+			customerName = "John";
+		} else {
+			this.customerName = customerName;
+		}
+	}
+	/*
+	 *  Set balance
+	 */
+	public void setBalance(double balance) {
+		if (balance < 0) {
+			this.balance = 0;
+		} else {
+			this.balance = balance;
+		}
+	}
+	/*
+	 *  Set yearCreateAccount
+	 */
+	public void setYearCreateAccount(int yearCreateAccount) {
+		if(yearCreateAccount < 0) {
+			this.yearCreateAccount = 0;
+		} else {
+			this.yearCreateAccount = yearCreateAccount;
+		}
+	}
+	/*
+	 *  Set monthCreatedAccount
+	 */
+	public void setMonthCreatedAccount(int monthCreatedAccount) {
+		if(monthCreatedAccount < 0) {
+			this.monthCreatedAccount = 0;
+		} else {
+			this.monthCreatedAccount = monthCreatedAccount;
+		}
+	}
+	
+	//deposit(double money amount) --> money which customer wants to deposit should be more than zero
+	
+	
+	//withdraw(double money amount) --> money which customer wants to withdraw should be less than his balance
+	
+}

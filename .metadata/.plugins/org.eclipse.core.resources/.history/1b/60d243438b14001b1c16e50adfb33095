@@ -1,0 +1,24 @@
+
+public class Driver {
+	
+	public static void printAccountInformation(BankAccount tempAccount) {
+		System.out.println("Account Number : " + tempAccount.getAccountNumber() +
+			"\nFull Name : " + tempAccount.getCustomerName() +
+			"\nBalance : $" + tempAccount.getBalance() +
+			"\nCreated Date : " + tempAccount.getYearCreatedAccount() + "-" +
+			tempAccount.getMonthCreatedAccount());
+	}
+
+	public static void main(String[] args) {
+		BankAccount b1 = new BankAccount(12345, "John Doe", 500.0, 2019, 13);
+		BankAccount b2 = new BankAccount(56789, "Jane Doe", 1000, 2020, 3);
+		
+//		printAccountInformation(b1);
+//		System.out.println("-------------------------");
+//		printAccountInformation(b2);
+//		System.out.println("-------------------------");
+		b1.deposit(-200);
+		printAccountInformation(b1);
+		
+	}
+}

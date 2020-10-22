@@ -1,0 +1,17 @@
+
+public class Driver {
+	public  static void main(String[] args) {
+		String s1 = "  Hello Java.  ";
+		System.out.println(s1.length());
+		String s2 = "You are cool language.";
+		System.out.println(s1.trim().concat(s2).toUpperCase());
+		
+//		for (int i=0; i<7; i++) {
+//			int randNumber = (int)((Math.random()*6)+5);
+//			System.out.println(randNumber);
+//		}
+		
+//		double num = 123.456;
+//		System.out.println((int)num);
+	}
+}

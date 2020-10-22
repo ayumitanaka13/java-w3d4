@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Driver {
+	
+	public static void printAccountInformation(BankAccount tempAccount) {
+		System.out.println("Account Number : " + tempAccount.getAccountNumber() +
+			"\nFull Name : " + tempAccount.getCustomerName() +
+			"\nBalance : $" + tempAccount.getBalance() +
+			"\nCreated Date : " + tempAccount.getYearCreatedAccount() + "-" +
+			tempAccount.getMonthCreatedAccount());
+	}
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		BankAccount b1 = new BankAccount(12345, "John Doe", 500.0, 2019, 13);
+		BankAccount b2 = new BankAccount(56789, "Jane Doe", 1000, 2020, 3);
+		
+		printAccountInformation(b1);
+		System.out.println("");
+		printAccountInformation(b2);
+		
+		System.out.println("\nEnter the amount that you want to deposit to first account: ");
+		b1.deposit(input.nextDouble());
+		printAccountInformation(b1);
+		
+		System.out.println("\nEnter the amount that you want to withdraw from second account: ");
+		b2.withdraw(input.nextDouble());
+		printAccountInformation(b2);
+
+	}
+}

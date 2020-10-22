@@ -1,0 +1,7 @@
+
+public class Driver {
+	public  static void main(String[] args) {
+		int randNumber = (int)Math.random();
+		System.out.println(randNumber * 10);
+	}
+}
